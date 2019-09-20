@@ -1,4 +1,5 @@
 ﻿using CSVMultiFormat.Interfaces;
+using CSVMultiFormat.Middlewares;
 using CSVMultiFormat.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace CSVMultiFormat
             services.AddScoped<IValidationService, ValidationService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<ICsvFileHandler, CsvFileHandler>();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +49,9 @@ namespace CSVMultiFormat
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseMiddleware();
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

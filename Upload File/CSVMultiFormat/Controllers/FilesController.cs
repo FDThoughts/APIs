@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using CSVMultiFormat.Interfaces;
 using CSVMultiFormat.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -14,6 +15,7 @@ namespace CSVMultiFormat.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [DisableCors]
     public class FilesController : ControllerBase
     {
         /// <summary>
