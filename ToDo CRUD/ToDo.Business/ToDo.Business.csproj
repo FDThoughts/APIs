@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToDo.Business.Interfaces\ToDo.Business.Interfaces.csproj" />
+    <ProjectReference Include="..\ToDo.Entities\ToDo.Entities.csproj" />
+    <ProjectReference Include="..\ToDo.Repository.Interfaces\ToDo.Repository.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

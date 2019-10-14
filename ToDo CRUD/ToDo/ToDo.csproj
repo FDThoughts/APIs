@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToDo.Business.Interfaces\ToDo.Business.Interfaces.csproj" />
+    <ProjectReference Include="..\ToDo.Business\ToDo.Business.csproj" />
+    <ProjectReference Include="..\ToDo.Entities\ToDo.Entities.csproj" />
+    <ProjectReference Include="..\ToDo.Repository.Interfaces\ToDo.Repository.Interfaces.csproj" />
+    <ProjectReference Include="..\ToDo.Repository\ToDo.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

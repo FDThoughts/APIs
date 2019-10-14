@@ -1,0 +1,15 @@
+﻿USE [ToDoApp]
+GO
+CREATE TABLE [dbo].[ToDo]
+(
+	[ToDoId] [bigint] IDENTITY(1, 1) NOT NULL PRIMARY KEY,
+	[TaskId] [bigint] NOT NULL,
+	[CatId] [bigint] NOT NULL,
+	CONSTRAINT FK_ToDo_Detail FOREIGN KEY (TaskId) REFERENCES [dbo].[Detail] (TaskId)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	CONSTRAINT FK_ToDo_Category FOREIGN KEY (CatId) REFERENCES [dbo].[Category] (CatId)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+)
+GO
